@@ -3,6 +3,7 @@ package com.training.ecommerce.entities;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -59,7 +60,7 @@ public class Product {
     private LocalDate lastUpdated;
 
     @JsonBackReference
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REFRESH)
     @JoinColumn(name = "category_id", nullable = false)
     private ProductCategory category;
 }

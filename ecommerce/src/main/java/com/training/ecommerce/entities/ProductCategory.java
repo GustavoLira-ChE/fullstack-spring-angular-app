@@ -11,13 +11,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-
-import lombok.Data;
 
 @Entity
 @Table(name = "product_category")
-@Data
 public class ProductCategory {
     
     @Id
@@ -29,6 +27,39 @@ public class ProductCategory {
     private String categoryName;
 
     @JsonManagedReference
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
+    @JsonIgnore
+    @OneToMany(cascade = CascadeType.MERGE, mappedBy = "category")
     private Set<Product> products;
+
+    public ProductCategory(){
+    }
+    public ProductCategory(String categoryName){
+        this.categoryName = categoryName;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public Set<Product> getProducts() {
+        return products;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+    public void setProducts(Set<Product> products) {
+        this.products = products;
+    }
+
+    
 }
