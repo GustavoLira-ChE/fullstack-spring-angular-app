@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-ecommerce-v2';
+
+  //properties of titles
+
+  title = 'NgEcom';
+
 }
