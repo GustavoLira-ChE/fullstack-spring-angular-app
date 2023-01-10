@@ -1,0 +1,66 @@
+<header class="desktop">
+  <div class="header-main">
+    <h1>{{title}}</h1>
+    <div class="header-main-search">
+      <input type="text">
+      <button style="height: 22px;">
+        <mat-icon style="font-size: 16px; height: 22px;">search</mat-icon>
+      </button>
+    </div>
+    <div class="header-cart">
+      <p>login</p>
+      <div class="header-cart-icon">
+        <mat-icon>shopping_cart</mat-icon>
+      </div>
+      <div class="header-cart-counter">1</div>
+    </div>
+  </div>
+  <hr>
+  <div class="header-list">
+    <nav>
+      <ul>
+        <li>Category 1</li>
+        <li>Category 2</li>
+        <li>Category 3</li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<header class="mobile">
+  <div class="mobile-menu-main">
+    <h1>{{title}}</h1>
+    <div>
+      <mat-icon (click)="toggleActiveMobileMenu()">menu</mat-icon>
+    </div>
+  </div>
+  <div class="mobile-menu-hide" [class.active]="activeMobileMenu">
+    <div class="mobile-menu-top">
+      <div class="header-main-search">
+        <input type="text">
+        <button style="height: 22px;">
+          <mat-icon style="font-size: 16px; height: 22px;">search</mat-icon>
+        </button>
+      </div>
+      <button (click)="toggleActiveMobileMenu()">X</button>
+    </div>
+    <div class="header-cart">
+      <p>login</p>
+      <div class="header-cart-icon">
+        <mat-icon>shopping_cart</mat-icon>
+      </div>
+      <div class="header-cart-counter">1</div>
+    </div>
+    <hr>
+    <div class="header-list">
+      <nav>
+        <ul>
+          <li>Category 1</li>
+          <li>Category 2</li>
+          <li>Category 3</li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
