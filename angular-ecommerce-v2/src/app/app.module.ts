@@ -9,13 +9,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { CategoryListComponent } from './components/category-list/category-list.component';
+import { ProductListByCategoryComponent } from './components/product-list-by-category/product-list-by-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ProductComponent,
-    ProductListComponent
+    ProductListComponent,
+    NotFoundComponent,
+    CategoryListComponent,
+    ProductListByCategoryComponent
   ],
   imports: [
     BrowserModule,
