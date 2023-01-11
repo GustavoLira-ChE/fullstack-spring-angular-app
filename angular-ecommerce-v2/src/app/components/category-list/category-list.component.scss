@@ -1,0 +1,25 @@
+ul{
+  display: flex;
+  flex-direction: row;
+  padding: 16px 10px 10px;
+
+  li{
+    margin: 8px 4px;
+    color:  rgb(102, 206, 102);
+    background-color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    border: 1px solid rgb(102, 206, 102);
+    &:hover{
+      color: #fff;
+      background-color: rgb(102, 206, 102);
+    }
+  }
+}
+
+@media screen and (max-width: 699.99999px) {
+
+}
+@media screen and (min-width: 700px) {
+
+}
