@@ -18,7 +18,13 @@ ul{
 }
 
 @media screen and (max-width: 699.99999px) {
-
+  ul{
+    flex-direction: column;
+    max-width: 200px;
+    li{
+      text-align: center;
+    }
+  }
 }
 @media screen and (min-width: 700px) {
 
