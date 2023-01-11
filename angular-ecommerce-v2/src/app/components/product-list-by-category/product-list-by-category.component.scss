@@ -1,0 +1,15 @@
+.product-list-grid{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+}
+app-product{
+  display: grid;
+  place-content: center;
+}
+
+@media screen and (max-width: 699.99999px) {
+  .product-list-grid{
+    padding-top: 52px;
+  }
+}
