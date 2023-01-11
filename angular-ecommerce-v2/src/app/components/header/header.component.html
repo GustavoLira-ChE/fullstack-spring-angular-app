@@ -1,6 +1,6 @@
 <header class="desktop">
   <div class="header-main">
-    <h1>{{title}}</h1>
+    <h1 (click)="goHome()">{{title}}</h1>
     <div class="header-main-search">
       <input type="text">
       <button style="height: 22px;">
@@ -16,20 +16,12 @@
     </div>
   </div>
   <hr>
-  <div class="header-list">
-    <nav>
-      <ul>
-        <li>Category 1</li>
-        <li>Category 2</li>
-        <li>Category 3</li>
-      </ul>
-    </nav>
-  </div>
+  <app-category-list></app-category-list>
 </header>
 
 <header class="mobile">
   <div class="mobile-menu-main">
-    <h1>{{title}}</h1>
+    <h1 (click)="goHome()">{{title}}</h1>
     <div>
       <mat-icon (click)="toggleActiveMobileMenu()">menu</mat-icon>
     </div>
@@ -52,15 +44,7 @@
       <div class="header-cart-counter">1</div>
     </div>
     <hr>
-    <div class="header-list">
-      <nav>
-        <ul>
-          <li>Category 1</li>
-          <li>Category 2</li>
-          <li>Category 3</li>
-        </ul>
-      </nav>
-    </div>
+    <app-category-list></app-category-list>
   </div>
 </header>
 
