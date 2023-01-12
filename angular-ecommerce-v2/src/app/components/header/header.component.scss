@@ -2,6 +2,7 @@
 
   mat-icon{
     display: inline;
+    color: rgb(102, 206, 102);
   }
   .header-main {
     display: grid;
@@ -140,9 +141,43 @@
         color: #fff;
       }
     }
+    .header-cart{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      align-items: center;
+
+      mat-icon{
+        color:rgb(102, 206, 102);
+      }
+
+      .header-cart-counter{
+        position: absolute;
+        background-color: #fff;
+        color: rgb(102, 206, 102);
+        border: 1px solid rgb(102, 206, 102);
+        border-radius: 50%;
+        display: block;
+        padding: 5px;
+        line-height: 20px;
+        height: 20px;
+        width: 20px;
+        top: 0px;
+        left: 65px;
+        text-align: center;
+
+        &:hover{
+          color: #fff;
+          background-color: rgb(102, 206, 102);
+        }
+      }
+  }
+
   }
 
 }
+
+
 
 
 @media screen and (max-width: 699.99999px) {
