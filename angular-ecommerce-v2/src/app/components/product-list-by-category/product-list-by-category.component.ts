@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
 import { ProductService } from 'src/app/services/product.service';
 import { ActivatedRoute } from '@angular/router';
+import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 
 @Component({
   selector: 'app-product-list-by-category',
@@ -15,7 +16,8 @@ export class ProductListByCategoryComponent implements OnInit, OnDestroy{
 
   constructor(
     private productService: ProductService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private shopping: ShoppingCartService
   ){ }
 
   ngOnDestroy(): void {
@@ -38,5 +40,9 @@ export class ProductListByCategoryComponent implements OnInit, OnDestroy{
   }
   destroySubscribe(){
     this.productService.getCategoryList().subscribe().closed;
+  }
+
+  onAddToShoppingCart(product: Product) {
+    this.shopping.addToShoppingCart(product);
   }
 }
